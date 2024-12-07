@@ -1,1 +1,1 @@
-# angular-ssr-kubernetes
+# Angular Server Side Rendering in Kubernetes
