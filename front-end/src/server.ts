@@ -25,7 +25,17 @@ const angularApp = new AngularNodeAppEngine();
  * });
  * ```
  */
-
+app.get('/api', (req, res) => {
+  const targetUrl = 'http://backend-service:8000/';
+  console.log(targetUrl)
+  fetch(targetUrl)
+    .then((apiRes) => apiRes.text())
+    .then((body) => res.send(body))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send(err);
+    });
+});
 /**
  * Serve static files from /browser
  */

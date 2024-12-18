@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   fetchData() {
-    this.http.get('http://localhost:8000').subscribe(
+    this.http.get('/api').subscribe(
       response => {
         console.log('API Response:', response);
       },
