@@ -13,6 +13,17 @@ cd k8s
 ./delete.sh
 ```
 
+View running services and pods
+```bash
+kubectl get svc
+kubectl get pods
+```
+
+Connect to front-end
+```bash
+minikube service frontend-service --url
+```
+
 ## Explanation
 
 We have a sample FastAPI backend which simply returns {"message":"Hello World"} when we query it.
